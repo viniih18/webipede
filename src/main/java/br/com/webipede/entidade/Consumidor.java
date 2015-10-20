@@ -1,21 +1,35 @@
 package br.com.webipede.entidade;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "consumidor")
 public class Consumidor {
 	
 	@Id
 	@GeneratedValue
 	private int idConsumidor;
 	
+	@Column(name = "nome", nullable = false)
 	private String nome;
+	
+	@Column(name = "endereco", nullable = false)
 	private String endereco;
+	
+	@Column(name = "telefone", nullable = false)
 	private String telefone;
+	
+	@Column(name = "email", nullable = false)
 	private String email;
+	
+	@Column(name = "usuario", nullable = false)
 	private String usuario;
+	
+	@Column(name = "senha", nullable = false)
 	private String senha;
 	
 	public int getIdConsumidor() {
